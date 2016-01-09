@@ -73,7 +73,7 @@
         $.ajax({
             type: "POST",
             url: 'index.php',
-            data: {newbutton: text},
+            data: {addbutton: text},
         });
     }
 
