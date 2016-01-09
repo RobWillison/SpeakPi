@@ -1,16 +1,35 @@
-<html>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Talk Thingy :D</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-<form role="form">
-    <div class="form-group">
-        <label for="text">Speak:</label>
-        <input type="text" class="form-control" id="text">
-    </div>
-    <button id="send" type="submit" class="btn btn-default">Submit</button>
-    <button id="meow" type="submit" class="btn btn-default">Meow</button>
-</form>
+<div class="container">
+    <h2>Column Sizing</h2>
+    <p>The form below shows input elements with different widths using different .col-xs-* classes:</p>
+    <form role="form">
+        <div class="form-group">
+            <div class="col-xs-2">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="text">Speak:</label>
+                        <input type="text" class="form-control" id="text">
+                    </div>
+                    <button id="send" type="submit" class="btn btn-default">Submit</button>
+                    <button id="meow" type="submit" class="btn btn-default">Meow</button>
+                </form>
+            </div>
+        </div>
+    </form>
+</div>
 
+</body>
 <script>
     function sendText(text) {
         $.ajax({
