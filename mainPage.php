@@ -9,7 +9,6 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <div class="container">
     <h2>Talk Thingy</h2>
     <form role="form">
@@ -19,6 +18,11 @@
                     <div class="form-group">
                         <label for="text">Speak:</label>
                         <input type="text" class="form-control" id="text">
+                        <select class="selectpicker">
+                            <? php
+                                echo '<option>
+                            ?>
+                        </select>
                     </div>
                     <button id="send" type="submit" class="btn btn-default">Submit</button>
                     <button id="meow" type="submit" class="btn btn-default">Meow</button>
