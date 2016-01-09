@@ -45,7 +45,6 @@
             type: "POST",
             url: 'index.php',
             data: {text: text, voice: voice},
-            success: null
         });
     }
 
