@@ -17,7 +17,7 @@ class SpeakObject
 
     public function setFrom($name) {
         $this->from = $name;
-        if ($name === 'Emily') {
+        if (in_array($name, ['Emily', 'Priyanka'])) {
             $this->setVoice('en+f3');
         }
     }
