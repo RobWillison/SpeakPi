@@ -49,7 +49,7 @@
                         echo "<button id=\"$name\" type=\"submit\" class=\"btn btn-default\">$button</button>";
                         echo "<script>
                         $( \"#$name\" ).click(function() {
-                                sendText('$button', $('#voice').val());
+                                sendText('$button', $('#from').val());
                         });
                     </script>";
                     }
