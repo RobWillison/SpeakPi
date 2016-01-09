@@ -18,13 +18,13 @@
                     <div class="form-group">
                         <label for="text">Speak:</label>
                         <input type="text" class="form-control" id="text">
-                        <select class="selectpicker">
+                        <select id="voice" class="selectpicker">
                             <?php
                                 $voice = new \SpeakServer\Service\Voices();
                                 $voices = $voice->getVoices();
 
                                 foreach ($voices as $name) {
-                                    echo "<option>" . $name['name'] . "</option>";
+                                    echo "<option value='". $name['value'] . "'>" . $name['name'] . "</option>";
                                 }
 
                             ?>
@@ -40,19 +40,19 @@
 
 </body>
 <script>
-    function sendText(text) {
+    function sendText(text, voice) {
         $.ajax({
             type: "POST",
             url: 'index.php',
-            data: {text: text}
+            data: {text: text, voice: voice}
         });
     }
 
     $( "#send" ).click(function() {
-        sendText($('#text').val());
+        sendText($('#text').val(), $('#voice').val());
     });
     $( "#meow" ).click(function() {
-        sendText('meow');
+        sendText('meow', $('#voice').val());
     });
 
 </script>
