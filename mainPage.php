@@ -41,7 +41,7 @@
             <?php
             $fp = fopen('Buttons.txt', 'r');
             while (!feof($fp)) {
-                $button = fread($fp);
+                $button = fgets($fp);
                 $name = md5($button);
                 echo "<button id=\"$name\" type=\"submit\" class=\"btn btn-default\">$button</button>";
                 echo "<script>
