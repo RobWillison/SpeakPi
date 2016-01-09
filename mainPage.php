@@ -24,9 +24,9 @@
                                 $voices = $voice->getVoices();
 
                                 foreach ($voices as $value => $name) {
-                                    echo '<option>$name</option>';
+                                    echo "<option>$name</option>";
                                 }
-                            
+
                             ?>
                         </select>
                     </div>
