@@ -20,7 +20,13 @@
                         <input type="text" class="form-control" id="text">
                         <select class="selectpicker">
                             <?php
-                                echo '<option>Hello</option>';
+                                $voice = new \SpeakServer\Service\Voices();
+                                $voices = $voice->getVoices();
+
+                                foreach ($voices as $value => $name) {
+                                    echo '<option>$name</option>';
+                                }
+                            
                             ?>
                         </select>
                     </div>
