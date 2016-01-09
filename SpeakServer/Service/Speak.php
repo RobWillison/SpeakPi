@@ -1,6 +1,6 @@
 <?php
 
-namespace SpeakServer;
+namespace SpeakServer\Service;
 
 class Speak
 {

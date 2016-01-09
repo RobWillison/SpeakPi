@@ -1,5 +1,5 @@
 <?php
-namespace SpeakServer;
+namespace SpeakServer\Objects;
 
 class SpeakObject
 {
