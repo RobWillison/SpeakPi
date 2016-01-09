@@ -12,7 +12,8 @@ class Speak
         $text = str_replace('\'', '', $object->getText());
         $voice = $object->getVoice();
         $from = $object->getFrom();
-        $text = $from . ' Says ' . $text;
+        $text = $from === '' ? $text : $from . ' Says ' . $text
+
         $block = 1;
 
         $fp = fopen(__DIR__ . '/../../lock', "w");
