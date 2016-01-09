@@ -42,7 +42,7 @@
             if(file_exists('Buttons.txt')) {
                 $fp = fopen('Buttons.txt', 'r');
                 while (!feof($fp)) {
-                    $button = fgets($fp);
+                    $button = trim(fgets($fp));
                     $name = md5($button);
                     if($button != '') {
                         echo "<button id=\"$name\" type=\"submit\" class=\"btn btn-default\">$button</button>";
