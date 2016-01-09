@@ -83,6 +83,7 @@
 
     $('#newbutonsubmit').click(function() {
         addButton($('#newbutton').val());
+        window.location.reload()
     });
 
 </script>
