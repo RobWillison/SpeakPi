@@ -1,7 +1,6 @@
 {
     "name": "robwillison/speak-pi",
     "require": {
-        "videlalvaro/php-amqplib": "^2.6"
     },
     "authors": [
         {
