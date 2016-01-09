@@ -2,8 +2,8 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use SpeakServer\Speak;
-use SpeakServer\SpeakObject;
+use SpeakServer\Service\Speak;
+use SpeakServer\Objects\SpeakObject;
 
 if (isset($_POST['text'])) {
     $toSpeak = new SpeakObject();
