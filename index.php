@@ -13,6 +13,7 @@ use SpeakServer\Objects\SpeakObject;
 if (isset($_POST['text'])) {
     $toSpeak = new SpeakObject();
     $toSpeak->addText($_POST['text']);
+    $toSpeak->setVoice('en');
 
     $speaker = new Speak();
     $speaker->speak($toSpeak);
