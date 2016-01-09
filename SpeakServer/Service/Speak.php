@@ -12,7 +12,7 @@ class Speak
         $text = str_replace('\'', '', $object->getText());
         $voice = $object->getVoice();
         $from = $object->getFrom();
-        $text = $from === '' ? $text : $from . ' Says ' . $text
+        $text = $from === '' ? $text : $from . ' Says ' . $text;
 
         $block = 1;
 
