@@ -44,12 +44,14 @@
                 while (!feof($fp)) {
                     $button = fgets($fp);
                     $name = md5($button);
-                    echo "<button id=\"$name\" type=\"submit\" class=\"btn btn-default\">$button</button>";
-                    echo "<script>
+                    if($button != '') {
+                        echo "<button id=\"$name\" type=\"submit\" class=\"btn btn-default\">$button</button>";
+                        echo "<script>
                         $( \"#$name\" ).click(function() {
                                 sendText('$button', $('#voice').val());
                         });
                     </script>";
+                    }
                 }
             }
             ?>
