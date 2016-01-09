@@ -4,8 +4,8 @@
   },
   "autoload": {
     "psr-4": {
-      "SpeakServer\\Service": "SpeakServer/Service",
-      "SpeakServer\\Objects": "SpeakServer/Objects"
+      "SpeakServer\\Service\\": "SpeakServer/Service",
+      "SpeakServer\\Objects\\": "SpeakServer/Objects"
     }
   },
   "authors": [
