@@ -11,6 +11,7 @@
 <body>
 <div class="container">
     <h2>Talk Thingy</h2>
+
     <form role="form">
         <div class="form-group">
             <div>
@@ -20,12 +21,12 @@
                         <input type="text" class="form-control" id="text">
                         <select id="voice" class="selectpicker">
                             <?php
-                                $voice = new \SpeakServer\Service\Voices();
-                                $voices = $voice->getVoices();
+                            $voice = new \SpeakServer\Service\Voices();
+                            $voices = $voice->getVoices();
 
-                                foreach ($voices as $name) {
-                                    echo "<option value='". $name['value'] . "'>" . $name['name'] . "</option>";
-                                }
+                            foreach ($voices as $name) {
+                                echo "<option value='" . $name['value'] . "'>" . $name['name'] . "</option>";
+                            }
 
                             ?>
                         </select>
@@ -35,12 +36,23 @@
             </div>
         </div>
         <h2>Extra Stuff</h2>
+
         <div>
-            <button id="meow" type="submit" class="btn btn-default">Meow</button>
-            <button id="loser" type="submit" class="btn btn-default">Loser</button>
-            <button id="youlose" type="submit" class="btn btn-default">You Lose</button>
-            <button id="yousmell" type="submit" class="btn btn-default">You Smell</button>
+            <?php
+            $fp = fopen('Buttons.txt', 'r');
+            while (!feof($fp)) {
+                $button = fread($fp);
+                $name = md5($button);
+                echo "<button id=\"$name\" type=\"submit\" class=\"btn btn-default\">$button</button>";
+                echo "<script>
+                        $( \"#$name\" ).click(function() {
+                                sendText('$button', $('#voice').val());
+                        });
+                    </script>";
+                }
+            ?>
         </div>
+
     </form>
 </div>
 
@@ -53,22 +65,6 @@
             data: {text: text, voice: voice},
         });
     }
-
-    $( "#send" ).click(function() {
-        sendText($('#text').val(), $('#voice').val());
-    });
-    $( "#meow" ).click(function() {
-        sendText('meow', $('#voice').val());
-    });
-    $( "#loser" ).click(function() {
-        sendText('Loser', $('#voice').val());
-    });
-    $( "#youlose" ).click(function() {
-        sendText('You Lose', $('#voice').val());
-    });
-    $( "#yousmell" ).click(function() {
-        sendText('You Smell', $('#voice').val());
-    });
 
 </script>
 
