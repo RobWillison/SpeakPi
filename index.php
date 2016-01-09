@@ -18,6 +18,8 @@ if (isset($_POST['text'])) {
 
     $speaker = new Speak();
     $speaker->speak($toSpeak);
+} else if (isset($_POST['newbutton'])) {
+
 } else {
     include 'mainPage.php';
 }

@@ -53,6 +53,9 @@
             ?>
         </div>
 
+        <h2>Add New Stuff</h2>
+        <input type="text" class="form-control" id="newbutton">
+        <button id=\"newbutonsubmit\" type=\"submit\" class=\"btn btn-default\"> Add </button>
     </form>
 </div>
 
@@ -65,6 +68,18 @@
             data: {text: text, voice: voice},
         });
     }
+
+    function addButton(text) {
+        $.ajax({
+            type: "POST",
+            url: 'index.php',
+            data: {newbutton: text},
+        });
+    }
+
+    $('#newbutonsubmit').click(function() {
+        addButton($('#newbutton').val());
+    });
 
 </script>
 
