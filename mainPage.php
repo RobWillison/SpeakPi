@@ -39,7 +39,7 @@
 
         <div>
             <?php
-            $fp = fopen('Buttons.txt', 'r');
+            $fp = fopen('Buttons.txt', 'r+');
             while (!feof($fp)) {
                 $button = fgets($fp);
                 $name = md5($button);
