@@ -1,0 +1,12 @@
+{
+    "name": "robwillison/speak-pi",
+    "require": {
+        "videlalvaro/php-amqplib": "^2.6"
+    },
+    "authors": [
+        {
+            "name": "RobWillison",
+            "email": "rob.willison@mayden.co.uk"
+        }
+    ]
+}
