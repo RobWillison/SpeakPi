@@ -17,6 +17,9 @@ class SpeakObject
 
     public function setFrom($name) {
         $this->from = $name;
+        if ($name === 'Emily') {
+            $this->setVoice('en+f3');
+        }
     }
 
     public function getFrom() {
