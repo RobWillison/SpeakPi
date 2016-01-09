@@ -19,7 +19,7 @@ if (isset($_POST['text'])) {
     $speaker = new Speak();
     $speaker->speak($toSpeak);
 } elseif (isset($_POST['addbutton'])) {
-    $fp = fopen('Button.txt', 'a');
+    $fp = fopen('Button.txt', 'a+');
     fwrite($fp, $_POST['newbutton']);
     fclose($fp);
 } else {
