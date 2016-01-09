@@ -2,6 +2,9 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+require_once __DIR__ . '/SpeakServer/Objects/SpeakObject.php';
+require_once __DIR__ . '/SpeakServer/Service/Speak.php';
+
 use SpeakServer\Service\Speak;
 use SpeakServer\Objects\SpeakObject;
 
