@@ -59,7 +59,7 @@
 
         <h2>Add New Stuff</h2>
         <input type="text" class="form-control" id="newbutton">
-        <button id=\"newbutonsubmit\" type=\"submit\" class=\"btn btn-default\"> Add </button>
+        <button id='newbutonsubmit' type="submit" class="btn btn-default"> Add </button>
     </form>
 </div>
 
