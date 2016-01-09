@@ -2,6 +2,8 @@
 
 namespace SpeakServer\Service;
 
+use SpeakServer\Objects\SpeakObject;
+
 class Speak
 {
 
