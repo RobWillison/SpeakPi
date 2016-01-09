@@ -18,7 +18,17 @@
                 <form role="form">
                     <div class="form-group">
                         <label for="text">From:</label>
-                        <input type="text" class="form-control" id="from">
+                        <select class="form-control" id="from">
+                        <?php
+                        if (file_exists('People.txt')) {
+                            $fp = fopen('People.txt', 'r');
+                            while (!feof($fp)) {
+                                $name = trim(fgets($fp));
+                                 echo "<option>$name</option>";
+                                }
+                            }
+                        ?>
+                        </select>
                         <label for="text">Speak:</label>
                         <input type="text" class="form-control" id="text">
                     </div>
@@ -30,12 +40,12 @@
 
         <div>
             <?php
-            if(file_exists('Buttons.txt')) {
+            if (file_exists('Buttons.txt')) {
                 $fp = fopen('Buttons.txt', 'r');
                 while (!feof($fp)) {
                     $button = trim(fgets($fp));
                     $name = md5($button);
-                    if($button != '') {
+                    if ($button != '') {
                         echo "<button id=\"$name\" type=\"submit\" class=\"btn btn-default\">$button</button>";
                         echo "<script>
                         $( \"#$name\" ).click(function() {
@@ -50,7 +60,7 @@
 
         <h2>Add New Stuff</h2>
         <input type="text" class="form-control" id="newbutton">
-        <button id='newbutonsubmit' type="submit" class="btn btn-default"> Add </button>
+        <button id='newbutonsubmit' type="submit" class="btn btn-default"> Add</button>
     </form>
 </div>
 
@@ -72,11 +82,11 @@
         });
     }
 
-    $('#send').click(function() {
+    $('#send').click(function () {
         sendText($('#text').val(), $('#from').val());
     });
 
-    $('#newbutonsubmit').click(function() {
+    $('#newbutonsubmit').click(function () {
         addButton($('#newbutton').val());
         window.location.reload()
     });
