@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/SpeakServer/Service/SpeakObject.php';
+require_once __DIR__ . '/SpeakServer/Objects/SpeakObject.php';
 
 use SpeakServer\Speak;
 use SpeakServer\SpeakObject;
