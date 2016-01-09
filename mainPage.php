@@ -81,6 +81,11 @@
         });
     }
 
+    $('#send').click(function() {
+        addButton($('#text').val(), $('#voice').val());
+        window.location.reload()
+    });
+
     $('#newbutonsubmit').click(function() {
         addButton($('#newbutton').val());
         window.location.reload()
