@@ -11,7 +11,7 @@ class Speak
     {
         $text = addslashes($object->getText());
         flock(__DIR__ . '/../../lock', LOCK_EX, 1);
-        exec(" echo '$text' | festival --tts");
+        exec("espeak -ven+f3 -k5 -s150 '$text");
     }
 
 }
