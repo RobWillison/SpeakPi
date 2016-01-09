@@ -9,7 +9,7 @@ class Speak
 
     public function speak(SpeakObject $object)
     {
-        $text = addslashes($object->getText());
+        $text = str_replace('\'', '', $object->getText());
         $voice = $object->getVoice();
 
         $block = 1;
