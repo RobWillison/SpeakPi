@@ -39,17 +39,19 @@
 
         <div>
             <?php
-            $fp = fopen('Buttons.txt', 'r+');
-            while (!feof($fp)) {
-                $button = fgets($fp);
-                $name = md5($button);
-                echo "<button id=\"$name\" type=\"submit\" class=\"btn btn-default\">$button</button>";
-                echo "<script>
+            if(file_exists('Buttons.txt')) {
+                $fp = fopen('Buttons.txt', 'r');
+                while (!feof($fp)) {
+                    $button = fgets($fp);
+                    $name = md5($button);
+                    echo "<button id=\"$name\" type=\"submit\" class=\"btn btn-default\">$button</button>";
+                    echo "<script>
                         $( \"#$name\" ).click(function() {
                                 sendText('$button', $('#voice').val());
                         });
                     </script>";
                 }
+            }
             ?>
         </div>
 
