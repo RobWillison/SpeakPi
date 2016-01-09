@@ -5,6 +5,7 @@ class SpeakObject
 {
     private $text;
     private $voice;
+    private $from;
 
     public function addText($text) {
         $this->text .= $text;
@@ -12,6 +13,14 @@ class SpeakObject
 
     public function getText() {
         return $this->text;
+    }
+
+    public function setFrom($name) {
+        $this->from = $name;
+    }
+
+    public function getFrom() {
+        return $this->from;
     }
 
     public function getVoice() {

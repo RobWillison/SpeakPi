@@ -14,8 +14,9 @@ if (isset($_POST['text'])) {
     $toSpeak = new SpeakObject();
     $toSpeak->addText($_POST['text']);
     $voice = isset($_POST['voice']) ? $_POST['voice'] : 'en';
+    $name = isset($_POST['from']) ? $_POST['from'] : '';
     $toSpeak->setVoice($voice);
-
+    $toSpeak->setFrom($name);
     $speaker = new Speak();
     $speaker->speak($toSpeak);
 } elseif (isset($_POST['addbutton'])) {

@@ -17,19 +17,10 @@
             <div>
                 <form role="form">
                     <div class="form-group">
+                        <label for="text">From:</label>
+                        <input type="text" class="form-control" id="from">
                         <label for="text">Speak:</label>
                         <input type="text" class="form-control" id="text">
-                        <select id="voice" class="selectpicker">
-                            <?php
-                            $voice = new \SpeakServer\Service\Voices();
-                            $voices = $voice->getVoices();
-
-                            foreach ($voices as $name) {
-                                echo "<option value='" . $name['value'] . "'>" . $name['name'] . "</option>";
-                            }
-
-                            ?>
-                        </select>
                     </div>
                     <button id="send" type="submit" class="btn btn-default">Submit</button>
                 </form>
@@ -69,7 +60,7 @@
         $.ajax({
             type: "POST",
             url: 'index.php',
-            data: {text: text, voice: voice},
+            data: {text: text, from: voice},
         });
     }
 
@@ -82,7 +73,7 @@
     }
 
     $('#send').click(function() {
-        sendText($('#text').val(), $('#voice').val());
+        sendText($('#text').val(), $('#from').val());
     });
 
     $('#newbutonsubmit').click(function() {
