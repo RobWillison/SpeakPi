@@ -11,6 +11,6 @@ if (isset($_POST['text'])) {
     $speaker = new Speak();
     $speaker->speak($toSpeak);
 } else {
-    include mainPage.html;
+    include 'mainPage.html';
 }
 
