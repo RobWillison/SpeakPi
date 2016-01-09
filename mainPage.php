@@ -82,8 +82,7 @@
     }
 
     $('#send').click(function() {
-        addButton($('#text').val(), $('#voice').val());
-        window.location.reload()
+        sendText($('#text').val(), $('#voice').val());
     });
 
     $('#newbutonsubmit').click(function() {
