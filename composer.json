@@ -1,11 +1,16 @@
 {
-    "name": "robwillison/speak-pi",
-    "require": {
-    },
-    "authors": [
-        {
-            "name": "RobWillison",
-            "email": "rob.willison@mayden.co.uk"
-        }
-    ]
+  "name": "robwillison/speak-pi",
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "SpeakServer\\": "SpeakServer/"
+    }
+  },
+  "authors": [
+    {
+      "name": "RobWillison",
+      "email": "rob.willison@mayden.co.uk"
+    }
+  ]
 }
