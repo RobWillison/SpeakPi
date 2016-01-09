@@ -31,9 +31,15 @@
                         </select>
                     </div>
                     <button id="send" type="submit" class="btn btn-default">Submit</button>
-                    <button id="meow" type="submit" class="btn btn-default">Meow</button>
                 </form>
             </div>
+        </div>
+        <h2>Extra Stuff</h2>
+        <div>
+            <button id="meow" type="submit" class="btn btn-default">Meow</button>
+            <button id="loser" type="submit" class="btn btn-default">Loser</button>
+            <button id="youlose" type="submit" class="btn btn-default">You Lose</button>
+            <button id="yousmell" type="submit" class="btn btn-default">You Smell</button>
         </div>
     </form>
 </div>
@@ -53,6 +59,15 @@
     });
     $( "#meow" ).click(function() {
         sendText('meow', $('#voice').val());
+    });
+    $( "#loser" ).click(function() {
+        sendText('Loser', $('#voice').val());
+    });
+    $( "#youlose" ).click(function() {
+        sendText('You Lose', $('#voice').val());
+    });
+    $( "#yousmell" ).click(function() {
+        sendText('You Smell', $('#voice').val());
     });
 
 </script>
