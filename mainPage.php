@@ -23,8 +23,8 @@
                                 $voice = new \SpeakServer\Service\Voices();
                                 $voices = $voice->getVoices();
 
-                                foreach ($voices as $value => $name) {
-                                    echo "<option>$name</option>";
+                                foreach ($voices as $name) {
+                                    echo "<option>" . $name['name'] . "</option>";
                                 }
 
                             ?>
