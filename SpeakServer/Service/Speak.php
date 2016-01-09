@@ -17,7 +17,7 @@ class Speak
         $fp = fopen(__DIR__ . '/../../lock', "w");
         flock($fp, LOCK_EX, $block);
 
-        exec("espeak -v$voice -k5 -s150 '$text'");
+        exec("espeak -k5 -s150 '$text' -v $voice");
     }
 
 }
