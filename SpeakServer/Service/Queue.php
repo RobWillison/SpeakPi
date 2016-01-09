@@ -8,17 +8,12 @@ use PhpAmqpLib\Message\AMQPMessage;
 class QueueRabbitMQ implements QueueInterface
 {
 
-    public function pop(SpeakObject $object)
-    {
-        // TODO: Implement pop() method.
-    }
-
     public function push(SpeakObject $object)
     {
         $this->writeToQueue($object->getText());
     }
 
-    private function writeToQueue($text) {
+    public function writeToQueue($text) {
         $connection = new AMQPStreamConnection('localhost', 5672, 'guest', 'guest');
         $channel = $connection->channel();
 
