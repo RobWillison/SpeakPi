@@ -8,19 +8,23 @@
         <input type="text" class="form-control" id="text">
     </div>
     <button id="send" type="submit" class="btn btn-default">Submit</button>
+    <button id="meow" type="submit" class="btn btn-default">Meow</button>
 </form>
 
 <script>
-    function sendText() {
+    function sendText(text) {
         $.ajax({
             type: "POST",
             url: 'index.php',
-            data: {text: $('#text').val()}
+            data: {text: text}
         });
     }
 
     $( "#send" ).click(function() {
-        sendText();
+        sendText($('#text').val());
+    });
+    $( "#meow" ).click(function() {
+        sendText('meow');
     });
 
 </script>
