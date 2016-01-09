@@ -20,7 +20,7 @@ if (isset($_POST['text'])) {
     $speaker->speak($toSpeak);
 } elseif (isset($_POST['addbutton'])) {
     $fp = fopen('Buttons.txt', 'a+');
-    fwrite($fp, 'hello');
+    fwrite($fp, $_POST['addbutton'] . PHP_EOL);
     fclose($fp);
 } else {
     include 'mainPage.php';
