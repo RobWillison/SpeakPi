@@ -19,8 +19,8 @@
                         <label for="text">Speak:</label>
                         <input type="text" class="form-control" id="text">
                         <select class="selectpicker">
-                            <? php
-                                echo '<option>
+                            <?php
+                                echo '<option>Hello</option>';
                             ?>
                         </select>
                     </div>
