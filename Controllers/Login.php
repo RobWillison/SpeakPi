@@ -1,5 +1,5 @@
 <?php
-
+namespace Controllers;
 
 class Login implements GenericController
 {
