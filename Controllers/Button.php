@@ -26,7 +26,7 @@ class Button implements GenericController
     public function addButton()
     {
         $button = $_POST['addbutton'];
-        file_put_contents(__DIR__ . '/../buttons.txt', $button, FILE_APPEND);
+        file_put_contents(__DIR__ . '/../Buttons.txt', $button, FILE_APPEND);
 
     }
 
