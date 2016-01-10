@@ -15,7 +15,7 @@
                     $button = trim(fgets($fp));
                     $name = md5($button);
                     if ($button != '') {
-                        echo "<button id=\"$name\" type=\"submit\" class=\"btn btn-default\">$button</button>";
+                        echo "<button id=\"$name\" class=\"btn btn-default\">$button</button>";
                         echo "<script>
                         $( \"#$name\" ).click(function() {
                                 sendText('$button');
@@ -29,7 +29,7 @@
 
         <h2>Add New Stuff</h2>
         <input type="text" class="form-control" id="newbutton">
-        <button id='newbutonsubmit' type="submit" class="btn btn-default"> Add</button>
+        <button id='newbutonsubmit' class="btn btn-default"> Add</button>
     </form>
 </div>
 

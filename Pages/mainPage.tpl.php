@@ -20,7 +20,7 @@
                         <label for="text">Speak:</label>
                         <input type="text" class="form-control" id="text">
                     </div>
-                    <button id="send" type="submit" class="btn btn-default">Submit</button>
+                    <button id="send" class="btn btn-default">Submit</button>
                 </form>
             </div>
         </div>
@@ -34,7 +34,7 @@
             type: "POST",
             url: 'index.php',
             data: {text: text},
-            success: function(data) { return false; },
+            success: function(data) { return true; },
         });
     }
 
