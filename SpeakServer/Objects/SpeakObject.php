@@ -4,7 +4,7 @@ namespace SpeakServer\Objects;
 class SpeakObject
 {
     private $text;
-    private $voice;
+    private $voice = 'en';
     private $from;
 
     public function addText($text) {

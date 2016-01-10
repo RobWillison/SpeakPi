@@ -10,8 +10,10 @@ class Speak
     public function speak(SpeakObject $object)
     {
         $text = str_replace('\'', '', $object->getText());
+
         $voice = $object->getVoice();
         $from = $object->getFrom();
+
         $text = $from === '' ? $text : $from . ' Says ' . $text;
 
         $block = 1;
