@@ -20,6 +20,6 @@ class Button implements GenericController
 
     public function get()
     {
-        include __DIR__ . '/../Pages/ButtonsPage.php.tpl.php';
+        include __DIR__ . '/../Pages/ButtonsPage.tpl.php';
     }
 }
