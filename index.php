@@ -11,7 +11,13 @@ $config = [
         ]
 ];
 
-$controllerName = $config['page'][$_GET['page']];
+if(isset($_GET['page'])){
+    $page = $_GET['page'];
+} elseif (isset($_SESSION['page'])) {
+    $page = $_SESSION['page'];
+}
+
+$controllerName = $config['page'][$page];
 var_dump($controllerName);
 $methodName = strtolower($_SERVER['REQUEST_METHOD']);
 
