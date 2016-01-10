@@ -13,11 +13,10 @@ class Speak
 
         $voice = $object->getVoice();
         $from = $object->getFrom();
-        $gender = $object->getGenderExtension();
 
         $text = $from == null ? $text : $from . ' Says ' . $text;
 
-        exec("espeak -k5 -s150 '$text' -v $voice$gender");
+        exec("espeak -k5 -s150 '$text' -v $voice");
     }
 
 }

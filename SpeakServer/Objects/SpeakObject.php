@@ -6,10 +6,6 @@ class SpeakObject
     private $text;
     private $voice = 'en';
     private $from = null;
-    private $gender;
-
-    const MALE = 0;
-    const FEMALE = 1;
 
     public function addText($text) {
         $this->text .= $text;
@@ -24,18 +20,6 @@ class SpeakObject
         if (in_array($name, ['Emily', 'Priyanka'])) {
             $this->setVoice('en+f3');
         }
-    }
-
-    public function setGender($gender) {
-        if($gender == MALE){
-            $this->gender = '';
-        } else {
-            $this->gender = '+f3';
-        }
-    }
-
-    public function getGenderExtension() {
-        return $this->gender;
     }
 
     public function getFrom() {
