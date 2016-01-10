@@ -16,7 +16,7 @@ if(isset($_GET['page'])){
 } elseif (isset($_SESSION['page'])) {
     $page = $_SESSION['page'];
 }
-var_dump($_SERVER['REQUEST_METHOD']);die;
+
 $controllerName = $config['page'][$page];
 $methodName = strtolower($_SERVER['REQUEST_METHOD']);
 
@@ -24,3 +24,4 @@ $controller = new $controllerName();
 
 
 $controller->$methodName();
+var_dump($_SESSION['page']);die;
