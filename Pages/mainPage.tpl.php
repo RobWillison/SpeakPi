@@ -33,7 +33,7 @@
         $.ajax({
             type: "POST",
             url: 'index.php',
-            data: {text: text, from: voice},
+            data: {text: text},
         });
     }
 
@@ -46,7 +46,7 @@
     }
 
     $('#send').click(function () {
-        sendText($('#text').val(), $('#from').val());
+        sendText($('#text').val());
     });
 </script>
 
