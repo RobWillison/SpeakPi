@@ -13,7 +13,10 @@ function loadDirectory($dir)
         if (is_dir($dir . '/' . $file)) {
             loadDirectory($dir . '/' . $file);
         } else {
-            require_once $dir . '/' . $file;
+            $file_parts = pathinfo($dir . '/' . $file);
+            if($file_parts['extension'] == 'php') {
+                require_once $dir . '/' . $file;
+            }
         }
     }
 }
