@@ -10,7 +10,7 @@ function loadDirectory($dir)
             continue;
         }
         var_dump($dir . '/' . $file);
-        if (is_dir($dir . $file)) {
+        if (is_dir($dir . '/' . $file)) {
             loadDirectory($dir . '/' . $file);
         } else {
             require_once $dir . '/' . $file;
