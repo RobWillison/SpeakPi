@@ -11,6 +11,6 @@ class Login implements GenericController
 
     public function get()
     {
-        echo include '../Pages/LoginPage.tpl.php';
+        include __DIR__ . '/../Pages/LoginPage.tpl.php';
     }
 }
