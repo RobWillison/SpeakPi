@@ -25,7 +25,9 @@ class Speak
     {
         $text = str_replace('\'', '', $text);
 
-        $text = str_replace([':(', ':)', ':D', ':E'], ['unhappy face', 'happy face', 'extra happy face', 'emilys face'], $text);
+        $text = str_replace([':(', ':)', ':D', ':E', ':R', ':J', ':P', ':U'],
+                            ['unhappy face', 'happy face', 'extra happy face', 'emilys face', 'Robs face', 'Joshs face', 'Priyankas face', 'Your face'],
+                            $text);
     }
 
 }
