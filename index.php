@@ -1,7 +1,7 @@
 <?php
 
 require 'autoloader.php';
-
+session_start();
 $config = [
     'page' => [
         'login' => 'Controllers\\Login',
