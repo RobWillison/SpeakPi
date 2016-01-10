@@ -9,7 +9,9 @@ class Speak
 
     public function speak(SpeakObject $object)
     {
-        $text = str_replace('\'', '', $object->getText());
+        $text = $object->getText();
+        $this->parseVoice($text);
+
 
         $voice = $object->getVoice();
         $from = $object->getFrom();
@@ -17,6 +19,13 @@ class Speak
         $text = $from == null ? $text : $from . ' Says ' . $text;
 
         exec("espeak -k5 -s150 '$text' -v $voice");
+    }
+
+    public function parseVoice(&$text)
+    {
+        $text = str_replace('\'', '', $text);
+
+        $text = str_replace([':(', ':)'], ['unhappy face', 'happy face'], $text);
     }
 
 }
