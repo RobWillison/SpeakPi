@@ -4,5 +4,5 @@ interface GenericController
 {
     public function post();
 
-    public function getPage();
+    public function get();
 }

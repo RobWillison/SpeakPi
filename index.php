@@ -18,6 +18,9 @@ $config = [
         ]
 ];
 
-$controller = $config['page'][$_GET['page']];
-$method = $_SERVER['REQUEST_METHOD'];
+$controllerName = $config['page'][$_GET['page']];
+$methodName = $_SERVER['REQUEST_METHOD'];
+
+$controller = new $controllerName;
+
 var_dump($controller, $method);die;
