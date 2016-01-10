@@ -20,4 +20,5 @@ function loadDirectory($name)
 }
 
 loadDirectory('Controllers');
+var_dump('hello');die;
 loadDirectory('SpeakServer');
