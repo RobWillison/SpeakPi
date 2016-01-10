@@ -1,7 +1,6 @@
 <?php
 namespace Controllers;
 
-namespace Controllers;
 use SpeakServer\Objects\SpeakObject;
 use SpeakServer\Service\Speak as Speaker;
 
