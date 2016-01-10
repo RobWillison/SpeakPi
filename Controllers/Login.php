@@ -9,6 +9,7 @@ class Login implements GenericController
         if(isset($_POST['name'])) {
             $_SESSION['name'] = preg_replace("/[^A-Za-z]/", '', $_POST['name']);
             $_SESSION['page'] = 'speak';
+            var_dump($_SESSION['page']);die;
             header("Refresh:0");
         }
     }
