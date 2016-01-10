@@ -10,7 +10,7 @@ $config = [
         '' => 'Controllers\\Login',
         ]
 ];
-var_dump($_SESSION['page']);
+$page = '';
 if(isset($_GET['page'])){
     $page = $_GET['page'];
 } elseif (isset($_SESSION['page'])) {
