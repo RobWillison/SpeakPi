@@ -40,8 +40,13 @@
             type: "POST",
             url: 'index.php',
             data: {text: text},
-            success: function(data) { return false; },
+            success: done(),
         });
+    }
+
+    function done()
+    {
+        alert();
     }
 
     function addButton(text) {
