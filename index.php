@@ -12,6 +12,7 @@ $config = [
 ];
 
 $controllerName = $config['page'][$_GET['page']];
+var_dump($controllerName);
 $methodName = strtolower($_SERVER['REQUEST_METHOD']);
 
 $controller = new $controllerName();
