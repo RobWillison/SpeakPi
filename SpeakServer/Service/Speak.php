@@ -16,10 +16,7 @@ class Speak
 
         $text = $from === '' ? $text : $from . ' Says ' . $text;
 
-        $block = 1;
-
-        $fp = fopen(__DIR__ . '/../../lock', "w");
-        flock($fp, LOCK_EX, $block);
+        var_dump("espeak -k5 -s150 '$text' -v $voice");
 
         exec("espeak -k5 -s150 '$text' -v $voice");
     }
