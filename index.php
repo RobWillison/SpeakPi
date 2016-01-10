@@ -10,7 +10,7 @@ $config = [
         '' => 'Controllers\\Login',
         ]
 ];
-var_dump($_SESSION['page']);die;
+
 if(isset($_GET['page'])){
     $page = $_GET['page'];
 } elseif (isset($_SESSION['page'])) {
@@ -24,3 +24,5 @@ $controller = new $controllerName();
 
 
 $controller->$methodName();
+
+exit();
