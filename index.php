@@ -19,4 +19,5 @@ $config = [
 ];
 
 $controller = $config['page'][$_GET['page']];
-var_dump($controller);die;
+$method = $_SERVER['REQUEST_METHOD'];
+var_dump($controller, $method);die;
