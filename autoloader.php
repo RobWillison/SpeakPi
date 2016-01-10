@@ -15,10 +15,10 @@ function loadDirectory($dir)
         } else {
             require_once $dir . '/' . $file;
         }
-    }die;
-
+    }
 }
 
 loadDirectory('SpeakServer');
+die;
 loadDirectory('Controllers');
 
