@@ -5,7 +5,7 @@ class SpeakObject
 {
     private $text;
     private $voice = 'en';
-    private $from;
+    private $from = null;
 
     public function addText($text) {
         $this->text .= $text;

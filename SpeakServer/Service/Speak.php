@@ -14,9 +14,7 @@ class Speak
         $voice = $object->getVoice();
         $from = $object->getFrom();
 
-        $text = $from === '' ? $text : $from . ' Says ' . $text;
-
-        var_dump("espeak -k5 -s150 '$text' -v $voice");
+        $text = $from == null ? $text : $from . ' Says ' . $text;
 
         exec("espeak -k5 -s150 '$text' -v $voice");
     }
