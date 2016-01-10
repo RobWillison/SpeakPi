@@ -24,4 +24,4 @@ $controller = new $controllerName();
 
 
 $controller->$methodName();
-var_dump($_SESSION['page']);die;
+var_dump('session' . $_SESSION['page']);die;
