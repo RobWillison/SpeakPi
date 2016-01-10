@@ -8,6 +8,7 @@ function loadDirectory($name)
         if (is_dir($file)) {
             loadDirectory($file);
         } else {
+            var_dump($file);die;
             require_once $file;
         }
     }
