@@ -1,13 +1,6 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
-
-require_once __DIR__ . '/SpeakServer/Objects/SpeakObject.php';
-require_once __DIR__ . '/SpeakServer/Service/Speak.php';
-require_once __DIR__ . '/SpeakServer/Service/Voices.php';
-
-use SpeakServer\Service\Speak;
-use SpeakServer\Objects\SpeakObject;
+require 'autoloder.php';
 
 $config = [
     'page' => [
@@ -21,6 +14,6 @@ $config = [
 $controllerName = $config['page'][$_GET['page']];
 $methodName = $_SERVER['REQUEST_METHOD'];
 
-$controller = new __DIR__ . '/' . $controllerName;
+$controller = new $controllerName;
 
 var_dump($controller, $method);die;
