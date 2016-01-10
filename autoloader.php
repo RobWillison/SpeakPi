@@ -13,9 +13,10 @@ function loadDirectory($name)
         if (is_dir($file)) {
             loadDirectory($file);
         } else {
+            var_dump($file);
             require_once $file;
         }
-    }
+    }die;
 
 }
 
