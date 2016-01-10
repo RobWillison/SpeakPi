@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<?= include 'header.html'; ?>
+<? include 'header.html'; ?>
 <body>
 <div class="container">
-    <?= include 'Common.tpl.php'; ?>
+    <? include 'Common.tpl.php'; ?>
 
     <form role="form">
         <h2>Extra Stuff</h2>
