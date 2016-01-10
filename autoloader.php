@@ -1,8 +1,8 @@
 <?php
 
-function loadDirectory($name)
+function loadDirectory($dir)
 {
-    $files = scandir($name);
+    $files = scandir($dir);
 
     foreach ($files as $file) {
 
@@ -11,10 +11,10 @@ function loadDirectory($name)
         }
 
         if (is_dir($file)) {
-            loadDirectory($file);
+            loadDirectory($dir . '/' . $file);
         } else {
             var_dump($file);
-            require_once $file;
+            require_once $dir . '/' . $file;
         }
     }die;
 
