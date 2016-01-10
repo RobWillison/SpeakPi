@@ -45,7 +45,7 @@
 
     function addButton(text) {
         $.ajax({
-            type: "POST",
+            type: "PUT",
             url: 'index.php',
             data: {addbutton: text},
         });

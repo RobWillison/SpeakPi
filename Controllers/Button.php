@@ -12,6 +12,11 @@ class Button implements GenericController
         if(isset($_POST['text'])) {
             $this->say();
         }
+
+    }
+
+    public function put()
+    {
         if(isset($_POST['addbutton'])) {
             $this->addButton();
         }
