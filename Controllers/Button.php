@@ -9,6 +9,11 @@ class Button implements GenericController
 
     public function post()
     {
+
+    }
+
+    public function say()
+    {
         $text = $_POST['text'];
 
         $speakObject = new SpeakObject();
@@ -16,6 +21,13 @@ class Button implements GenericController
 
         $speaker = new Speaker();
         $speaker->speak($speakObject);
+    }
+
+    public function addButton()
+    {
+        $button = $_POST['addbutton'];
+        file_put_contents(__DIR__ . '/../buttons.txt', $button, FILE_APPEND);
+
     }
 
     public function get()
