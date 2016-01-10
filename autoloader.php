@@ -19,5 +19,6 @@ function loadDirectory($dir)
 
 }
 
-loadDirectory('Controllers');
 loadDirectory('SpeakServer');
+loadDirectory('Controllers');
+
