@@ -11,6 +11,7 @@ class Speak implements GenericController
     public function post()
     {
         $text = str_replace('\'', '', $_POST['text']);
+        var_dump($text);die;
         $speakObject = new SpeakObject();
         $speakObject->setFrom($_SESSION['name']);
         $speakObject->addText($text);
