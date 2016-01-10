@@ -9,7 +9,6 @@ function loadDirectory($dir)
         if(($file == '.') || ($file == '..')) {
             continue;
         }
-        var_dump($dir . '/' . $file);
         if (is_dir($dir . '/' . $file)) {
             loadDirectory($dir . '/' . $file);
         } else {
@@ -22,6 +21,5 @@ function loadDirectory($dir)
 }
 
 loadDirectory('SpeakServer');
-die;
 loadDirectory('Controllers');
 
