@@ -25,4 +25,4 @@ $controller = new $controllerName();
 
 $controller->$methodName();
 
-exit();
+var_dump($_SESSION['page']);
