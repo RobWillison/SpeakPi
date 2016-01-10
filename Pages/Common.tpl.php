@@ -23,6 +23,7 @@
                 ?>
                 <li class="<?= $speakClass ?>"><a href="index.php?page=speak">Speak<span class="sr-only">(current)</span></a></li>
                 <li class="<?= $buttonClass ?>"><a href="index.php?page=button">Buttons</a></li>
+                <li><a href="index.php?page=login">Logout</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
