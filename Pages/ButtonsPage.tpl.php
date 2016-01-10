@@ -46,7 +46,7 @@
 
     function done()
     {
-        alert();
+        return true;
     }
 
     function addButton(text) {
