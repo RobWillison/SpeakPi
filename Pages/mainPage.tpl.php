@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="container">
-    <?= include 'Common.tpl.php'; ?>
+    <? include 'Common.tpl.php'; ?>
 
     <form role="form">
         <div class="form-group">

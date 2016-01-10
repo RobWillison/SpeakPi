@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?= include 'header.html'; ?>
+<? include 'header.html'; ?>
 <body>
 <div class="container">
     <h2>Login</h2>
