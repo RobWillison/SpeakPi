@@ -40,6 +40,7 @@
             type: "POST",
             url: 'index.php',
             data: {text: text},
+            success: function(data) { return false; },
         });
     }
 
@@ -48,6 +49,7 @@
             type: "POST",
             url: 'index.php',
             data: {addbutton: text},
+            success: function(data) { return false; },
         });
     }
 
