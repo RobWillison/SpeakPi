@@ -6,7 +6,7 @@ class Login implements GenericController
 
     public function post()
     {
-
+        echo 'Hello';
     }
 
     public function get()
