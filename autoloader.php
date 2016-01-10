@@ -9,15 +9,15 @@ function loadDirectory($dir)
         if(($file == '.') || ($file == '..')) {
             continue;
         }
-
+        var_dump($dir . '/' . $file);
         if (is_dir($file)) {
             loadDirectory($dir . '/' . $file);
         } else {
             require_once $dir . '/' . $file;
         }
-    }
+    }die;
 
 }
 
 loadDirectory('Controllers');
-//loadDirectory('SpeakServer');
+loadDirectory('SpeakServer');
