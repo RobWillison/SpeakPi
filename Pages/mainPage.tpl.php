@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="container">
-    <h2>Talk Thingy</h2>
+    <h2>Talk Thingy, Hi <?= $_SESSION['name']; ?></h2>
 
     <form role="form">
         <div class="form-group">
