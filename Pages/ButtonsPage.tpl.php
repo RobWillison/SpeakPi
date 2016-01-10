@@ -17,7 +17,8 @@
                     if ($button != '') {
                         echo "<button id=\"$name\" class=\"btn btn-default\">$button</button>";
                         echo "<script>
-                        $( \"#$name\" ).click(function() {
+                        $( \"#$name\" ).click(function(e) {
+                                e.preventDefault();
                                 sendText('$button');
                         });
                     </script>";
