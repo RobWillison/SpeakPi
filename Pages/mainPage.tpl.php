@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="container">
-    <h2>Talk Thingy, Hi <?= $_SESSION['name']; ?></h2>
+    <?= include 'Common.tpl.php'; ?>
 
     <form role="form">
         <div class="form-group">

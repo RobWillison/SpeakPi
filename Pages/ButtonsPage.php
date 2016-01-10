@@ -3,7 +3,7 @@
 <?= include 'header.html'; ?>
 <body>
 <div class="container">
-    <h2>Talk Thingy</h2>
+    <?= include 'Common.tpl.php'; ?>
 
     <form role="form">
         <h2>Extra Stuff</h2>
@@ -18,7 +18,7 @@
                         echo "<button id=\"$name\" type=\"submit\" class=\"btn btn-default\">$button</button>";
                         echo "<script>
                         $( \"#$name\" ).click(function() {
-                                sendText('$button', $('#from').val());
+                                sendText('$button');
                         });
                     </script>";
                     }
@@ -35,11 +35,11 @@
 
 </body>
 <script>
-    function sendText(text, voice) {
+    function sendText(text) {
         $.ajax({
             type: "POST",
             url: 'index.php',
-            data: {text: text, from: voice},
+            data: {text: text},
         });
     }
 
@@ -50,10 +50,6 @@
             data: {addbutton: text},
         });
     }
-
-    $('#send').click(function () {
-        sendText($('#text').val(), $('#from').val());
-    });
 
     $('#newbutonsubmit').click(function () {
         addButton($('#newbutton').val());
