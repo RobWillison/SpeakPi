@@ -1,7 +1,7 @@
 <?php
-
-require 'autoloader.php';
 session_start();
+require 'autoloader.php';
+
 $config = [
     'page' => [
         'login' => 'Controllers\\Login',
@@ -10,7 +10,7 @@ $config = [
         '' => 'Controllers\\Login',
         ]
 ];
-
+var_dump($_SESSION['page']);die;
 if(isset($_GET['page'])){
     $page = $_GET['page'];
 } elseif (isset($_SESSION['page'])) {
