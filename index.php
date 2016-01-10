@@ -21,6 +21,6 @@ $config = [
 $controllerName = $config['page'][$_GET['page']];
 $methodName = $_SERVER['REQUEST_METHOD'];
 
-$controller = new $controllerName;
+$controller = new __DIR__ . '/' . $controllerName;
 
 var_dump($controller, $method);die;
