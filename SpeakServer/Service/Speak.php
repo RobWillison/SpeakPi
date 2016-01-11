@@ -7,6 +7,9 @@ use SpeakServer\Objects\SpeakObject;
 class Speak
 {
 
+    private $formatRules = [':(' => 'unhappy face',
+    ];
+
     public function speak(SpeakObject $object)
     {
         $text = $object->getText();
@@ -24,10 +27,21 @@ class Speak
     public function parseVoice(&$text)
     {
         $text = str_replace('\'', '', $text);
-
-        $text = str_replace([':(', ':)', ':D', ':E', ':R', ':J', ':P', ':U'],
-                            ['unhappy face', 'happy face', 'extra happy face', 'emilys face', 'Robs face', 'Joshs face', 'Priyankas face', 'Your face'],
-                            $text);
+        var_dump($text);
+        $text = str_replace(
+            [':(', ':)', ':D', ':E', ':R', ':J', ':P', ':U'],
+            [
+                'unhappy face',
+                'happy face',
+                'extra happy face',
+                'emilys face',
+                'Robs face',
+                'Joshs face',
+                'Priyankas face',
+                'Your face',
+            ],
+            $text
+        );
     }
 
 }
